@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Modal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./trangchu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <style>
+        .modal {
+            display: none;
+
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-muave {
+            background-color: rgba(255, 250, 247, 1);
+            margin: 10% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 1181px;
+            position: relative;
+            border-radius: 5px;
+            height: 520px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .modal-close:hover {
+            color: #000;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        .movie-details {
+            margin-bottom: 5px;
+        }
+
+        .text_color {
+            color: #B8B8B8;
+        }
+
+        .modal_mua_ve {
+            position: fixed;
+            /* Đặt vị trí của modal là cố định */
+            top: 50%;
+            /* Di chuyển modal lên phía trên 50% của trang */
+            left: 50%;
+            /* Di chuyển modal sang trái 50% của trang */
+            transform: translate(-50%, -50%);
+            /* Dịch chuyển modal lùi lại 50% chiều rộng và 50% chiều cao của nó */
+        }
+    </style>
+</head>
+
+<body>
+
+    <button type="button" style="border: 1px solid black;">open modal</button>
+    <div class="main_content">
+        <form action="" method="post">
+        <div class="modal_mua_ve font_chu" style=" z-index: 9999;">
+            <div class="modal-muave " style=" width: 1181px; height: 700px;">
+                <span class="modal-close">&times;</span>
+                <div class="mua_ve gird grid-rows-6">
+                    <div class="thu_ngay click_active_button grid grid-cols-7">
+                        <div>
+                            <button class="choose_day choose_btn w-[149px] h-[56px] bg-white rounded-lg font-bold text-[20px] font_chu"
+                                style="box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);" type="button"><span>Thứ
+                                    2</span><br><span>6-11</span></button>
+                        </div>
+                    </div>
+                    <hr class="mt-6 bg-black w-full " style="border:2px black solid">
+                    <div class="dia_diem click_active_button  mt-6 grid grid-cols-7 gap-2 ">
+                        <div>
+                            <button class="choose_address choose_btn w-[137px] h-[44px] bg-white rounded-lg font-bold text-[20px] font_chu"
+                                style="box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);" type="button"><span>Thanh
+                                    Hóa</span></button>
+                        </div>
+                    </div>
+                    <hr class="mt-6 bg-black w-full " style="border:2px black solid">
+                    <div class="loai_rap click_active_button mt-6 flex">
+                        <div>
+                            <button class="choose_rap  choose_btn  w-[76px] h-[37px] bg-white rounded-lg font-bold text-[20px] font_chu"
+                                style="box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);"
+                                type="button"><span>2D</span></button>
+                        </div>
+                        <div>
+                            <button class="choose_rap choose_btn w-[76px] h-[37px] bg-white rounded-lg font-bold text-[20px] font_chu ml-3"
+                                style="box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);"
+                                type="button"><span>3D</span></button>
+                        </div>
+                    </div>
+                    <hr class="gio_chieu_1 mt-6 bg-black w-full " style="border:2px black solid;display: none;">
+                    <div class="gio_chieu_1 click_active_button mt-6 grid grid-cols-12 font_chu" style="display:none">
+                        <div class="">
+                            <span class="text-center font-bold text-[23px]">FSTARTS VINH 1</span>
+                        </div>
+                        <div></div>
+                        <div class="col-span-9">
+                            <div class="grid grid-cols-8 gap-2">
+                                <div><button type="button"
+                                        class="choose_time choose_btn w-[94px] h-[37px] bg-white rounded-lg font-bold text-[20px]"
+                                        style="box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);"><span>8:00</span></button>
+                                </div>                   
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                    <hr class="gio_chieu_1 mt-6  w-full " style="border:2px black dashed;display:none;"  >
+                    <div class="gio_chieu_2 click_active_button mt-6 font_chu grid grid-cols-12" style="display:none">
+                        <div class="">
+                            <span class="text-center font-bold text-[23px]">FSTARTS VINH 2</span>
+                        </div>
+                        <div></div>
+                        <div class="col-span-9">
+                            <div class="grid grid-cols-8 gap-2">
+                                <div><button type="button"
+                                        class="choose_btn w-[94px] h-[37px] bg-white rounded-lg font-bold text-[20px]"
+                                        style="box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);"><span>8:00</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                    <hr class="mt-6  w-full " style="border:2px black dashed">
+                    <div class="grid grid-cols-11 mt-6">
+                        <div class="col-span-8"></div>
+                        <button class="huy_dat_ve font_chu w-[111px] h-[55px]  bg-white rounded-lg text-orange-600 font-bold text-[25px] hover:bg-orange-600 hover:text-white hover:duration-500" 
+                        type="button">HỦY</button>
+                        <button class="xac_nhan_dat_ve col-span-2 ml-6 font_chu w-[163px] h-[55px] bg-orange-600 text-white font-bold text-[25px] rounded-lg hover:bg-white hover:text-orange-600 hover:duration-500" type="submit">TIẾP TỤC</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $(".modal_mua_ve").show();
+            });
+
+            // Đóng modal khi click vào 
+            $(".modal-close").click(function () {
+                $(".modal_mua_ve").hide();
+            });
+        });
+        //hàm sự kiện mua vé
+        $(document).ready(function(){          
+            $('.click_active_button').on('click','.choose_btn',function(){
+                if($(this).hasClass('active')){
+                    $(this).removeClass('active');
+                    $(this).css({
+                        'background-color':'white',
+                        'border':'none'
+                    })
+                }
+                else{
+                    $(this).closest('.click_active_button').find('.choose_btn').removeClass('active');
+                    $(this).closest('click_active_button').find('.choose_btn').css({
+                        'background-color':'white',
+                        'border':'none'
+                    })
+                    $(this).addClass('active');
+                    $(this).css({
+                        'background-color':'rgba(255, 246, 241, 1)',
+                        'border':'2px solid black'
+                    })
+                }
+            })
+            $('.choose_address').click(function(){
+                $('.gio_chieu_1').show();
+                $('.gio_chieu_2').show();
+            })
+            $('.huy_dat_ve').click(function(){
+                $(".modal_mua_ve").hide();
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./modal_infor_film_showing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:opsz,wght@8..144,500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>THANH TOÁN</title>
+    <style>
+        .main_content {
+            background-image: url(./bodyimg/back_film.png);
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 980px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_content">
+        <div class="p-10 flex">
+            <button class="btn_back w-[77px] h-[77px] rounded-full flex items-center justify-center mr-8" onclick="redirectToPrevPage()" style="background-color: rgba(51, 51, 51, 0.81);"><svg class="w-[26px] h-[40px]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#6d7178}</style><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></button>
+            <div class="grid grid-rows-3 justify-items-center">
+                <div class="w-[1227px] h-[298px] rounded-t-3xl" style="background-color: rgba(51, 51, 51, 1);">
+                    <div class="grid grid-cols-5">
+                        <div class="flex justify-center"><img class="w-[166px] h-[247px] mt-7 rounded-xl"
+                                style="box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);"
+                                src="./anhphim/anhphimcoming/coming13.jpg" alt=""></div>
+                        <div class="col-span-4 grid grid-rows-3 text-center font_roboto_cach_dieu">
+                            <div class="flex items-center justify-center">
+                                <h1 class="font-semibold text-[44px]" style="color: rgba(217, 108, 44, 1);">GIAO LỘ 8675
+                                </h1>
+                            </div>
+                            <div class="row-span-2 grid grid-cols-2 text-white font-normal">
+                                <div class="grid grid-rows-3 text-center text-[26px]">
+                                    <span>Hài, Hành Động, Tình Cảm</span>
+                                    <span>12:30 | Thứ 5 9-11-2023</span>
+                                    <span>Giá tiền : <span class="text-orange-500">70.000 VNĐ</span></span>
+                                </div>
+                                <div class="grid grid-rows-3 text-[26px]">
+                                    <span>Mã vé : <span class="text-orange-500">178276627388</span></span>
+                                    <span>Ghế : <span>D5</span></span>
+                                    <span>Loại rạp : <span>2D</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-span-2 w-[1227px] h-[583px] rounded-b-3xl font_roboto_cach_dieu"
+                    style="background-color: rgba(40, 39, 40, 1);">
+                    <h1 class=" text-white font-semibold text-[30px] ml-4 mt-3">PHƯƠNG THỨC THANH TOÁN</h1>
+                    <div class="grid grid-rows-3 mt-5 relative">
+                        <button class="w-[1129px] h-[126px] flex items-center justify-self-center rounded-full"
+                            style="background-color: rgba(51, 51, 51, 1);"><img class="w-[124px] h-[79px] ml-9"
+                                src="./bodyimg/icon_payment/-icon-_Visa_.svg" alt="">
+                            <h1 class="text-orange-500 font-semibold text-[28px] ml-10">VISA</h1>
+                        </button>
+                        <button class="w-[1129px] h-[126px] flex items-center justify-self-center rounded-full mt-3"
+                            style="background-color: rgba(51, 51, 51, 1);"><img class="w-[124px] h-[79px] ml-9"
+                                src="./bodyimg/icon_payment/-icon-_MasterCard_.svg" alt="">
+                            <h1 class="text-orange-500 font-semibold text-[28px] ml-10">MASTER CARD</h1>
+                        </button>
+                        <button class="w-[1129px] h-[126px] flex items-center justify-self-center rounded-full mt-5"
+                        onclick="redirectToPage()"
+                            style="background-color: rgba(51, 51, 51, 1);"><img class="w-[124px] h-[79px] ml-9"
+                                src="./bodyimg/icon_payment/-icon-_qrcode-viewfinder_.svg" alt="">
+                                <h1 class="text-orange-500 font-semibold text-[28px] ml-10">VN PAY 
+                                </h1><img class="ml-[670px]" src="./bodyimg/icon_payment/-icon-_arrow-circle-down_.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPage() {
+            window.location.href = "trangchu.html";
+          }
+
+          function redirectToPrevPage() {
+            window.location.href = "cho_ngoi.html";
+          }
+    </script>
+</body>
+
+</html>

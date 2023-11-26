@@ -1,0 +1,26 @@
+.font_page{
+    font-family: 'Roboto', sans-serif;
+}
+.body_showing_head{
+    background-image: url(./bodyimg/back_film.png);
+    height: 102px;
+    text-shadow: 5px 5px 5px black;
+}
+.line_head_body{
+    position: absolute;
+width: 1472px;
+height: 0px;
+left: 0px;
+top: 280px;
+border: 8px dashed #000000;
+
+
+}
+.img_film_showing:hover{
+box-shadow:none ;
+border: 1px solid orangered;
+}
+.footer_film_showing{
+    background-color: black;
+    height: 234px;
+}

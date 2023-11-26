@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         /* CSS để ẩn dropdown menu */
+        .dropdown-menu {
+            display: none;
+        }
+        
+        /* CSS để hiển thị dropdown menu khi hover vào menu cha */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        /* CSS để hiển thị navbar */
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        /* CSS để tạo phần tử menu */
+        .menu {
+            display: inline-block;
+            position: relative;
+        }
+        
+        /* CSS để tạo phần tử dropdown */
+        .dropdown {
+            display: inline-block;
+        }
+        
+        /* CSS để tạo phần tử dropdown menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        /* CSS để tạo phần tử menu con */
+        .dropdown-menu li {
+            padding: 5px 0;
+        }
+    </style>
+    <title>Clickable Dropdown Navbar Example</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu">
+            <a href="#">Menu 1</a>
+            <div class="dropdown">
+                <a href="#">Dropdown 1</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Submenu 1</a></li>
+                    <li><a href="#">Submenu 2</a></li>
+                    <li><a href="#">Submenu 3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="#">Menu 2</a>
+            <div class="dropdown">
+                <a href="#">Dropdown 2</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Submenu 4</a></li>
+                    <li><a href="#">Submenu 5</a></li>
+                    <li><a href="#">Submenu 6</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="col-lg-2 show_movie">
+                    <ul class="Movie_nav">
+                        <li><a class="nav_movie" href="#">Movie</a></li>
+                        <li class="hidden_movie"><a href="#">Now showing</a></li>
+                        <li class="hidden_movie"><a href="#">Coming Soon</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 show_movie">
+                    <ul class="Movie_nav">
+                        <li class="nav_movie"><a href="#">Theaters</a></li>
+                        <li class="hidden_movie"><a href="#">All CGV Cinemas</a></li>
+                        <li class="hidden_movie"><a href="#">Special Cinemas</a></li>
+                        <li class="hidden_movie"><a href="#">3D Cinemas</a></li>
+                    </ul>
+                    
+                </div>
+                <div class="col-lg-2">
+                 </div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2"></div> --> 
+
+    <script>
+        // JavaScript để xử lý sự kiện click vào phần tử trong dropdown menu
+        var dropdownMenus = document.getElementsByClassName('dropdown-menu');
+        for (var i = 0; i < dropdownMenus.length; i++) {
+            var dropdownMenu = dropdownMenus[i];
+            dropdownMenu.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        }
+    </script>
+</body>
+</html>

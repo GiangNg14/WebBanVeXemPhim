@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./modal_infor_film_showing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CHỌN CHỖ NGỒI</title>
+    <style>
+        .main_sheat {
+            background-image: url(./bodyimg/back_film.png);
+            width: 100%;
+            height: 850px;
+        }
+
+        .btn_confirm {
+            color: rgba(40, 39, 40, 1);
+        }
+
+        .btn_confirm:hover {
+            color: orange;
+            background-color: white;
+            transition: 200ms;
+        }
+
+        .chon_ghe.active span {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_sheat grid grid-rows-5">
+        <div class="man_hinh flex justify-center relative">
+            <img class="mt-4 w-[1216px] h-[165px]" src="./bodyimg/Line-22.svg" alt="">
+            <span class="font_chu font-bold text-[38px] leading-8 absolute top-20"
+                style="color:rgba(173, 173, 173, 0.81);">Màn hình</span>
+        </div>
+        <div class="row-span-3 mt-12">
+            <div class="grid grid-cols-11 ">
+                <div></div>
+                <div class="col-span-4">
+                    <div class="grid grid-cols-5 gap-5 font_chu_content ghe_ngoi click_chon_ghe">
+                    </div>
+                </div>
+                <div></div>
+                <div class="col-span-4">
+                    <div class="grid grid-cols-5 gap-5 font_chu_content ghe_ngoi2 click_chon_ghe">
+                    </div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+        <div class="grid grid-cols-6 mt-20 font_chu_content">
+            <div></div>
+            <div class="font-bold text-[25px] leading-8 flex" style="color: rgba(173, 173, 173, 1);">
+                <div class="w-[34px] h-[34px] mr-2" style="background-color: rgba(40, 39, 40, 1); border:1px solid">
+                </div>Ghế trống
+            </div>
+            <div class="font-bold text-[25px] leading-8 flex" style="color: rgba(173, 173, 173, 1);">
+                <div class="w-[34px] h-[34px] mr-2" style="background-color: 
+                rgba(123, 65, 0, 1); border:1px solid">
+                </div>Đã dặt
+            </div>
+            <div class="font-bold text-[25px] leading-8 flex" style="color: rgba(173, 173, 173, 1);">
+                <div class="w-[34px] h-[34px] mr-2" style="background-color: rgba(217, 108, 44, 1); border:1px solid">
+                </div>Đang chọn
+            </div>
+            <div></div>
+            <div><button onclick="redirectToPaymentPage()"
+                    class="btn_confirm w-[163px] h-[55px] bg-orange-500 rounded-sm font-semibold leading-9 text-[23px]">Xác
+                    nhận</button></div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var Container = $('.ghe_ngoi');
+            var arr_ghe = [];
+            var hang_ghe = ["A", "B", "C", "D", "E"];
+            var maxColumn = 5;
+            for (var i = 0; i < hang_ghe.length; i++) {
+                var hang_ghe1 = hang_ghe[i];
+                for (var j = 1; j <= maxColumn; j++) {
+                    var seat = hang_ghe1 + j;
+                    arr_ghe.push(seat);
+                    if (hang_ghe === "E" && j === maxColumn) {
+                        break;
+                    }
+                }
+            }
+            for (var i = 0; i < 25; i++) {
+                var cell = $('<div class="chon_ghe w-[80px] h-[80px] rounded-lg flex items-center justify-center" style="background-color: rgba(40, 39, 40, 1);"><span class="text-orange-600 font-bold text-[35px]"></span></div>');
+                cell.find('span').text(arr_ghe[i]);
+                Container.append(cell);
+            }
+
+            var Container2 = $('.ghe_ngoi2');
+            var arr_ghe2 = [];
+            var maxColumn2 = 10;
+            for (var i = 0; i < hang_ghe.length; i++) {
+                var hang_ghe1 = hang_ghe[i];
+                for (var j = 6; j <= maxColumn2; j++) {
+                    var seat2 = hang_ghe1 + j;
+                    arr_ghe2.push(seat2);
+                    if (hang_ghe === "E" && j === maxColumn) {
+                        break;
+                    }
+                }
+            }
+            for (var i = 0; i < 25; i++) {
+                var cell2 = $('<div class="chon_ghe w-[80px] h-[80px] rounded-lg flex items-center justify-center" style="background-color: rgba(40, 39, 40, 1);"><span class="text-orange-600 font-bold text-[35px]"></span></div>');
+                cell2.find('span').text(arr_ghe2[i]);
+                Container2.append(cell2);
+            }
+
+            //hàm avtive seat1
+            $('.click_chon_ghe').on('click', '.chon_ghe', function () {
+                $(this).toggleClass('active');
+                if ($(this).hasClass('active')) {
+                    $(this).css('background-color', 'rgba(217, 108, 44, 1)');
+                } else {
+                    $(this).css('background-color', 'rgba(40, 39, 40, 1)');
+                }
+            });
+
+        })
+
+        function redirectToPaymentPage(){
+            window.location.href="payment.html";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./trangchu.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./filmisshowing.css">
+    <title>PHIM ĐANG CHIẾU</title>
+</head>
+<body>
+    <div class="home_header w-full relative">
+        <div class="grid grid-cols-3">
+            <!-- header -->
+            <div>
+                <img class="img_logo w-[450px] " src="./homeimg/FSTARS.png" alt="">
+            </div>
+            <!-- tìm kiếm -->
+            <div class="flex justify-center ">
+                <input type="text" style="margin-right:-30px" name="search_head" id=""
+                    class="text-gray-700 font-chu rounded-xl search_head" value="   Tìm kiếm tên phim,diễn viên">
+                <svg class="search_node " xmlns="http://www.w3.org/2000/svg" height="1em"
+                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                </svg>
+            </div>
+            <!-- nút đăng nhập đăng kí -->
+            <div class="flex">
+                <span class="text-white font-bold top-16 ml-52 absolute"><a class="grid grid-cols-3" href="#">
+                        <p class="col-span-2 mr-2 font_chu">Đăng nhập/Đăng kí </p>
+                        <svg class="mt-1" xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <style>
+                                svg {
+                                    fill: #c1c1c8
+                                }
+                            </style>
+                            <path
+                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                        </svg>
+                    </a></span>
+            </div>
+        </div>
+        <div class="w-full bg-black grid grid-cols-5 nav_header text-[20px]">
+            <div class="nav_content">
+                <a class="font_chu text-white  " href="">TRANG CHỦ</a>
+            </div>
+            <div class="nav_content grid grid-rows-6" id="Movie_nav">
+                <a class="font_chu text-white flex justify-center " href="#">PHIM
+                    <svg class="ml-3 mt-1 font-thin w-3" xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                            svg {
+                                fill: #fafafa
+                            }
+                        </style>
+                        <path
+                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                    </svg>
+                </a>
+                <a class="nav_film font_chu text-white flex justify-center bg-black h-full w-52 mt-[1.5px] ml-9  hover:bg-orange-500 ease-out"
+                    href="" style="display: none;">PHIM ĐANG CHIẾU</a>
+                <a class="nav_film font_chu text-white flex justify-center bg-black h-full w-52 ml-9  hover:bg-orange-500 ease-out"
+                    href="" style="display: none;">PHIM SẮP CHIẾU</a>
+                <div class="row-span-4"></div>
+            </div>
+            <div class="nav_content grid grid-rows-6 z-30" id="Genre_nav">
+                <a class="font_chu text-white flex justify-center  " href="#">THỂ LOẠI
+                    <svg class="ml-3 mt-1 font-thin w-3" xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                            svg {
+                                fill: #fafafa
+                            }
+                        </style>
+                        <path
+                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                    </svg>
+                </a>
+                <a href="" style="display: none;"
+                    class="genre_film font_chu text-white flex justify-center bg-black mt-[2px] w-52 h-full ml-9  hover:bg-orange-500 ease-out">HÀI</a>
+                <a href="" style="display: none;"
+                    class="genre_film font_chu text-white flex justify-center bg-black  w-52 h-full ml-9  hover:bg-orange-500 ease-out">HÀNH
+                    ĐỘNG</a>
+                <a href="" style="display: none;"
+                    class="genre_film font_chu text-white flex justify-center bg-black  w-52 h-full ml-9  hover:bg-orange-500 ease-out">TÌNH
+                    CẢM</a>
+                <a href="" style="display: none;"
+                    class="genre_film font_chu text-white flex justify-center bg-black  w-52 h-full ml-9  hover:bg-orange-500 ease-out">KINH
+                    DỊ</a>
+                <a href="" style="display: none;"
+                    class="genre_film font_chu text-white flex justify-center bg-black  w-52 h-full ml-9  hover:bg-orange-500 ease-out">PHIÊU
+                    LƯU</a>
+                <a href="" style="display: none;"
+                    class="genre_film font_chu text-white flex justify-center bg-black  w-52 h-full ml-9  hover:bg-orange-500 ease-out">HOẠT
+                    HÌNH</a>
+            </div>
+            <div class="nav_content">
+                <a class="font_chu text-white  " href="">RẠP/GIÁ VÉ</a>
+            </div>
+            <div class="nav_content">
+                <a class="font_chu text-white   " href="">LỊCH SỬ MUA VÉ</a>
+            </div>
+        </div>
+    </div>
+    <div class="body-film-showing">
+            <div class="body_showing_head w-full h-[102px] flex justify-center items-center text-center mt-3 z-10">
+                <h1 class=" text-white mt-5 font-bold text-[50px] font_page leading-7">PHIM ĐANG CHIẾU</h1>
+            </div>
+            <div class="body_showing_content w-full h-[2036px]">
+                <div class="line_head_body"></div>
+                <div class="grid grid-cols-4 gap-4 mt-16">
+                    <div class="grid grid-rows-4">
+                        <div class="row-span-2 justify-self-center">
+                        <img class="img_film_showing rounded-xl relative" src="./anhphim/anhphimcoming/coming1.jpg" style="box-shadow:5px 5px 5px rgb(56, 55, 55);" width="241px" height="359px" alt="">
+                        <button 
+                        class="font_chu bg-gray-600 text-white font-bold w-[119px] h-[38px] -mt-12 ml-14 absolute hover:bg-orange-600 hover:text-black">MUA VÉ</button>
+                        </div>
+                        <div class="font_page text-center mt-3">
+                            <h1 class="font-bold text-[20px] leading-9" style="text-shadow: 1px 1px 1px    rgb(90, 82, 82);">OPENHEIMER</h1>
+                            <div class="grid grid-rows-3 gap-3">
+                            <span><strong>Thể loại:</strong> Hồi hộp,lịch sử</span>
+                            <span><strong>Khởi chiếu:</strong> 11-08-2023</span>
+                            <span class="-ml-4"><strong>Thời lượng:</strong> 180 phút</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="footer_film_showing">
+        <div class="grid grid-rows-5">
+            <div>
+                <hr class="hr_footer ">
+                <hr class="hr_footer mt-2">
+            </div>
+            <div class="">
+                <img class="logo_footer_home" src="./homeimg/footer_img/FSTARS_NHỎ HƠN.png" alt="">
+            </div>
+            <div class="row-span-3 grid grid-cols-2">
+                <div>
+                    <p class="text-white">dsfdsfsdfsdfds</p>
+                </div>
+                <div>
+                    <p class="text-white">dsafcdsfdsgsdgs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ <script>
+    //function thả phim
+    $(document).ready(function () {
+        $("#Movie_nav").click(function () {
+            var navFilm = $(this).find('.nav_film');
+            if (navFilm.css('display') === 'none') {
+                navFilm.css('display', 'block');
+            } else {
+                navFilm.css('display', 'none');
+            }
+        })
+    });
+    $(document).ready(function () {
+        $("#Genre_nav").click(function () {
+            var navFilm = $(this).find('.genre_film');
+            if (navFilm.css('display') === 'none') {
+                navFilm.css('display', 'block');
+            } else {
+                navFilm.css('display', 'none');
+            }
+        })
+    });
+    
+ </script>
+</body>
+</html>

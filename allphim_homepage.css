@@ -1,0 +1,13 @@
+.All_films_content{
+    background-image: url(./bodyimg/back_film.png);
+    height: 1609px;
+}
+
+.img_film_all{
+    width: 278px;
+    height: 381px;
+}
+
+.All_films_footer{
+    background-color: black;
+}

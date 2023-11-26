@@ -1,0 +1,43 @@
+{
+	"folders": [
+		{
+			"path": "../../bka html"
+		},
+		{
+			"path": "../../bka html/Buổi 9"
+		},
+		{
+			"path": "../../bka html/Buổi 10"
+		},
+		{
+			"path": "../../bka html/Buổi 11"
+		},
+		{
+			"path": "../../bka html/Buoi12tailwind"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../../bka html/Buoi13responsivetail"
+		},
+		{
+			"path": "../../NguyenTruongGiang"
+		},
+		{
+			"path": "../../bka html/Buoi14ReactJS"
+		},
+		{
+			"path": "D:/PHP/demo_php"
+		},
+		{
+			"path": "../../bka html/Testreact"
+		},
+		{
+			"path": "../../bka html/Buoi16"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DoAnWeb"
+	}
+}

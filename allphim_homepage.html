@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./trangchu.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="./allphim_homepage.css">
+    <title>ALL FILMS</title>
+</head>
+<body>
+    <div class="home_header w-full relative">
+        <div class="grid grid-cols-3 ">
+            <!-- header -->
+            <div>
+                <img class="img_logo" src="./homeimg/FSTARS.png" alt="">
+            </div>
+            <!-- tìm kiếm -->
+            <div class="flex ">
+                <input type="text" style="margin-right:-30px" name="search_head" id="" class="rounded-xl search_head">
+                <svg class="search_node " xmlns="http://www.w3.org/2000/svg" height="1em"
+                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                </svg>
+            </div>
+            <!-- nút đăng nhập đăng kí -->
+            <div class="flex">
+                <span class="text-white font-bold top-16 ml-52 absolute"><a class="grid grid-cols-3" href="#">
+                        <p class="col-span-2 mr-2 font_chu">Đăng nhập/Đăng kí </p>
+                        <svg class="mt-1" xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <style>
+                                svg {
+                                    fill: #c1c1c8
+                                }
+                            </style>
+                            <path
+                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                        </svg>
+                    </a></span>
+            </div>
+        </div>
+        <div class="w-full bg-black grid grid-cols-5 nav_header text-[20px]" >
+            <div class="nav_content">
+                <a class="font_chu font-bold text-white  " href="">TRANG CHỦ</a>
+            </div>
+            <div class="nav_content">
+                <a class="font_chu  text-white  " href="">PHIM</a>
+            </div>
+            <div class="nav_content">
+                <a class="font_chu text-white  " href="">THỂ LOẠI</a>
+            </div>
+            <div class="nav_content">
+                <a class="font_chu text-white  " href="">RẠP/GIÁ VÉ</a>
+            </div>
+            <div class="nav_content">
+                <a class="font_chu text-white   " href="">LỊCH SỬ MUA VÉ</a>
+            </div>
+        </div>
+    </div>
+    <div class="All_films_content max-w-full">
+        <div class="grid grid-rows-7  w-full  film_homepage">
+            <div class="ml-7" style="height: 40px;">
+                <span><a href="" class="font_chu text-white font-bold text-xl px-3 underline hover:text-red-600"
+                        style="border-right:1px solid white;">PHIM ĐANG CHIẾU</a></span>
+                <span><a href="" class="font_chu text-white font-bold text-xl px-3 hover:text-red-600">PHIM SẮP
+                        CHIẾU</a></span>
+            </div>
+            <div class="row-span-5 grid grid-cols-4 gap-3 justify-items-center all_films">
+                <div class="">
+                    <img class="img_film_all rounded-3xl " src="./anhphim/anhfilm1.jpg" alt="">
+                    <button type="button" class="text-white w-44 h-9 rounded-lg bg-blue-500 float-right" id="button_show_info_film">Xem thông tin phim</button>
+                </div>
+
+                <img class="img_film_all rounded-3xl" src="./anhphim/anhfilm2.jpg" alt="">
+                <img class="img_film_all rounded-3xl" src="./anhphim/anhfilm3.jpg" alt="">
+                <img class="img_film_all rounded-3xl" src="./anhphim/anhfilm4.jpg" alt="">
+                <img class="img_film_all rounded-3xl" src="./anhphim/anhfilm5.jpg" alt="">
+                <img class="img_film_all rounded-3xl" src="./anhphim/anhfilm6.jpg" alt="">
+
+            </div>
+        </div>
+    </div>
+    <div class="All_films_footer max-w-full">
+        <div class="grid grid-rows-5">
+            <div>
+                <hr class="hr_footer ">
+                <hr class="hr_footer mt-2">
+            </div>
+            <div class="">
+                <img class="logo_footer_home" src="./homeimg/footer_img/FSTARS_NHỎ HƠN.png" alt="">
+            </div>
+            <div class="row-span-3 grid grid-cols-2">
+                <div>
+                    <p class="text-white">dsfdsfsdfsdfds</p>
+                </div>
+                <div>
+                    <p class="text-white">dsafcdsfdsgsdgs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

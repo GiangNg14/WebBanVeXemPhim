@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./modal_infor_film_showing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:opsz,wght@8..144,500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>XÁC NHẬN THANH TOÁN</title>
+    <style>
+        .content {
+            background-image: url(./bodyimg/back_film.png);
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 1024px;
+        }
+        .icon_qr_code{
+            margin-left: 25%;
+        }
+        .show-transition {
+            transition: opacity 2000ms;
+          }
+    </style>
+</head>
+
+<body>
+    <div class="content relative">
+        <div class="grid grid-cols-2 relative">
+            <div class="w-[567px] h-[871px] absolute left-[96px] z-40 top-[76px] rounded-l-2xl"
+                style="background-color: rgba(51, 51, 51, 1);">
+                <div class="grid grid-rows-4 h-[871px]">
+                    <div class="grid grid-cols-3">
+                        <div class="flex justify-center items-center">
+                            <img src="./bodyimg/icon_payment/-icon-_qrcode-viewfinder_.svg" alt="">
+                        </div>
+                        <div class="col-span-2 flex  items-center font_roboto_cach_dieu">
+                            <strong class="font-semibold text-[25px] -mt-10" style="color: rgba(217, 108, 44, 1);">VN PAY</strong>
+                            <span class="text-white font-normal text-[23px] mt-16 -ml-24">12:30 | Thứ 5 9-11-2023</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-rows-3 font_roboto_cach_dieu ">
+                        <p class="font-normal text-white text-[30px] ml-16 leading-10">Tổng tiền: <span>70000</span> VNĐ</p>
+                        <p class="font-normal text-white text-[30px] ml-16 leading-10">Số ghế: <span>B2</span></p>
+                        <p class="font-normal text-white text-[30px] ml-16 leading-10">Loại rạp: <span>2D</span></p>
+                    </div>
+                    <div class="flex font_roboto_cach_dieu ">
+                        <img class="icon_qr_code w-[259px] h-[259px]" src="./bodyimg/icon_payment/maqr.svg" alt="">
+                        <div class="show_tick_confirm flex justify-center items-center" style="display: none;">
+                        <img class="w-[35px] h-[35px] mr-2 ml-5" src="./bodyimg/icon_payment/tichxanh.svg" alt=""><span class="font-normal text-[24px]" style="color: rgba(27, 225, 23, 1);">Đã thanh toán</span>
+                    </div>
+                    </div>
+                    <div class="font_roboto_cach_dieu flex justify-center items-center">
+                        <button class="btn_confirm w-[476px] h-[75px] font-medium rounded-3xl text-[31px]" style="background-color: rgba(40, 39, 40, 1);color:rgba(217, 108, 44, 1)">XÁC NHẬN ĐÃ QUÉT MÃ</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" w-[791px] h-[871px] absolute left-[553px] top-[76px] rounded-r-2xl" style="background-color: rgba(40, 39, 40, 1);">
+                <div class="ticket_confirm bg-white w-[572px] h-[801px] mt-9 ml-44 rounded-3xl grid grid-rows-4" style="display: none;">
+                    <div class="flex justify-center ">
+                        <img class="w-[500px] h-[196px] mt-4 rounded-t-3xl" style="box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);" src="./anhphim/anhfilm2 _Copy.jpg" alt="">
+                    </div>
+                    <div class="grid grid-rows-3 font_roboto_cach_dieu font-semibold">
+                        <span class=" text-[32px] ml-10 mt-5" style="text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);">GIAO LỘ 8675</span>
+                        <span class="ml-10" style="color:rgba(91, 91, 91, 1); text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);">Hãy đưa vé này cho nhân viên rạp để nhận vé</span>
+                        <hr style="border: 2px dashed black;margin-top:-20px;">
+                    </div>
+                    <div class="grid grid-rows-3 -mt-16 font_roboto_cach_dieu">
+                        <div class="grid grid-cols-12">
+                            <div></div>
+                            <div class="col-span-5" style="color:rgba(91, 91, 91, 1);">
+                                <span class="font-normal text-[21px]">Tên rạp:<br><span class="font-medium text-[24px]">FSTARS VINH 1</span></span>
+                            </div>
+                            <div class="col-span-5" style="color:rgba(91, 91, 91, 1);">
+                                <span class="font-normal text-[21px]">Thời gian :<br><span class="font-medium text-[24px]">12:30</span></span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-12">
+                            <div></div>
+                            <div class="col-span-5" style="color:rgba(91, 91, 91, 1);">
+                                <span class="font-normal text-[21px]">Ngày mua :<br><span class="font-medium text-[24px]">Thứ 5 | 9-11-2023</span></span>
+                            </div>
+                            <div class="col-span-5" style="color:rgba(91, 91, 91, 1);">
+                                <span class="font-normal text-[21px]">Số ghế :<br><span class="font-medium text-[24px]">B2</span></span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-12">
+                            <div></div>
+                            <div class="col-span-5" style="color:rgba(91, 91, 91, 1);">
+                                <span class="font-normal text-[21px]">Số tiền :<br><span class="font-medium text-[24px]">70.000 VNĐ</span></span>
+                            </div>
+                            <div class="col-span-5" style="color:rgba(91, 91, 91, 1);">
+                                <span class="font-normal text-[21px]">Hạng Ghế<br><span class="font-medium text-[24px]">Phổ Thông</span></span>
+                            </div>
+                        </div>
+                        <hr style="border: 2px dashed black;">
+                    </div>
+                    
+                    <div class="flex justify-center items-center">
+                        <img class="w-[500px] h-[147px]"  src="./bodyimg/icon_payment/mavach.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="font_chu">
+            <button class="btn_luu_ve w-[107px] h-[52px] absolute top-[956px] left-[1096px] font-bold text-[19px] rounded-2xl flex justify-center items-center" style="background-color: rgba(40, 39, 40, 1);color:rgba(217, 108, 44, 1)">Lưu vé <img class="tick_luu_ve w-[17px] h-[17px] ml-2" style="display:none" src="./bodyimg/icon_payment/tichxanh.svg" alt=""></button>
+            <button onclick="redirectToHomePage()" class="w-[187px] h-[52px] absolute top-[956px] left-[1226px] font-bold text-[19px] rounded-2xl" style="background-color: rgba(40, 39, 40, 1);color:rgba(217, 108, 44, 1)">TRANG CHỦ</button>
+        </div>
+    </div>
+    
+</body>
+<script>
+    $(document).ready(function(){
+        $('.btn_confirm').click(function(){
+            $(this).css('background-color','rgba(217, 108, 44, 1)');
+            $(this).css('color','rgba(40, 39, 40, 1)');
+            $(".icon_qr_code").css({
+                'margin-left': '10%',
+                'transition': 'margin-left 300ms'
+              });
+              $(".show_tick_confirm").addClass(".show-transition").show();
+              $(".ticket_confirm").addClass(".show-transition").show();
+        })
+        $(".btn_luu_ve").click(function(){
+            $(".tick_luu_ve").addClass(".show-transition").show();
+        })
+    })
+    function redirectToHomePage() {
+        window.location.href = "trangchu.html";
+      }
+</script>
+</html>

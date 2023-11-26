@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Thêm mới người dùng</h2>
+        <form action="https://651ab40b340309952f0db7e5.mockapi.io/fakeApiDoAn" method="post">
+          <div class="form-group">
+            <label for="name">TÊN</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+          </div>
+          <div class="form-group">
+            <label for="phoneText">SỐ ĐIỆN THOẠI:</label>
+            <input type="text" class="form-control" id="phoneText" placeholder="Enter phone number" name="phoneText">
+          </div>
+          <div class="form-group">
+            <label for="email">EMAIL:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="account">TÀI KHOẢN:</label>
+            <input type="text" class="form-control" id="account" placeholder="Enter email" name="account">
+          </div>
+          
+          <button type="submit" class="btn btn-default">Thêm</button>
+        </form>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+          $("form").submit(function () {
+              $.ajax({
+                  url: "https://651ab40b340309952f0db7e5.mockapi.io/Product",
+                  type: "POST",
+                  data: $(this).serialize(),
+                  dataType: 'json',
+                  success: function (data) {
+                      console.log(data)
+                      window.location.href = "http://127.0.0.1:5500/nhanvien.html";
+                  },  
+                  error: function () {
+                      console.log("co lỗi xảy ray")
+                  }
+              })
+              window.location.href = "http://127.0.0.1:5500/nhanvien.html";
+
+
+          })
+
+        })
+      </script>
+</body>
+</html>

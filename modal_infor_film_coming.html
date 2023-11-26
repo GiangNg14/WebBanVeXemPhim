@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./trangchu.css">
+    <link rel="stylesheet" href="./modal_infor_film_showing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Thông tin phim</title>
+    <style>
+        .img_infor_film:hover {
+            box-shadow: 3px 3px 3px rgb(226, 124, 7);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home_header w-full relative">
+        <div class="grid grid-cols-3">
+            <!-- header -->
+            <div>
+                <img class="img_logo w-[450px] " src="./homeimg/FSTARS.png" alt="">
+            </div>
+            <!-- tìm kiếm -->
+            <div class="flex justify-center ">
+                <input type="text" style="margin-right:-30px" name="search_head" id=""
+                    class="text-gray-700 font-chu rounded-xl search_head" value="   Tìm kiếm tên phim,diễn viên">
+                <svg class="search_node " xmlns="http://www.w3.org/2000/svg" height="1em"
+                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                </svg>
+            </div>
+            <!-- nút đăng nhập đăng kí -->
+            <div class="flex">
+                <span class="text-white font-bold top-16 ml-52 absolute"><a class="grid grid-cols-3" href="#">
+                        <p class="col-span-2 mr-2 font_chu">Đăng nhập/Đăng kí </p>
+                        <svg class="mt-1" xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <style>
+                                svg {
+                                    fill: #c1c1c8
+                                }
+                            </style>
+                            <path
+                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                        </svg>
+                    </a></span>
+            </div>
+        </div>
+        <div class="w-full bg-black grid grid-cols-5 nav_header text-[20px]">
+            <div class="nav_content">
+                <a class="font_chu text-white  " href="">TRANG CHỦ</a>
+            </div>
+            <div class="nav_content grid grid-rows-6 z-50" id="Movie_nav">
+                <a class="font_chu text-white flex justify-center " href="#">PHIM
+                    <svg class="ml-3 mt-1 font-thin w-3" xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                            svg {
+                                fill: #fafafa
+                            }
+                        </style>
+                        <path
+                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                    </svg>
+                </a>
+                <a class="nav_film font_chu text-white flex justify-center bg-black h-full w-52 mt-[1.5px] ml-9  hover:bg-orange-500 ease-out"
+                    href="./filmisshowing.html" style="display: none;">PHIM ĐANG CHIẾU</a>
+                <a class="nav_film font_chu text-white flex justify-center bg-black h-full w-52 ml-9  hover:bg-orange-500 ease-out"
+                    href="./filmiscoming.html" style="display: none;">PHIM SẮP CHIẾU</a>
+                <div class="row-span-4"></div>
+            </div>
+            <div class="nav_content grid grid-rows-6 z-50" id="Genre_nav">
+                <a class="font_chu text-white flex justify-center  " href="#">THỂ LOẠI
+                    <svg class="ml-3 mt-1 font-thin w-3" xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                            svg {
+                                fill: #fafafa
+                            }
+                        </style>
+                        <path
+                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                    </svg>
+                </a>
+                <a href="" style="display: none;"
+                    class="genre_film font_chu text-white flex justify-center bg-black mt-[2px] w-52 h-full ml-9  hover:bg-orange-500 ease-out">HÀI</a>
+                <a href="" style="display: none;"
+                    class="genre_film font_chu text-white flex justify-center bg-black  w-52 h-full ml-9  hover:bg-orange-500 ease-out">HÀNH
+                    ĐỘNG</a>
+                <a href="" style="display: none;"
+                    class="genre_film font_chu text-white flex justify-center bg-black  w-52 h-full ml-9  hover:bg-orange-500 ease-out">TÌNH
+                    CẢM</a>
+                <a href="" style="display: none;"
+                    class="genre_film font_chu text-white flex justify-center bg-black  w-52 h-full ml-9  hover:bg-orange-500 ease-out">KINH
+                    DỊ</a>
+                <a href="" style="display: none;"
+                    class="genre_film font_chu text-white flex justify-center bg-black  w-52 h-full ml-9  hover:bg-orange-500 ease-out">PHIÊU
+                    LƯU</a>
+                <a href="" style="display: none;"
+                    class="genre_film font_chu text-white flex justify-center bg-black  w-52 h-full ml-9  hover:bg-orange-500 ease-out">HOẠT
+                    HÌNH</a>
+            </div>
+            <div class="nav_content">
+                <a class="font_chu text-white  " href="">RẠP/GIÁ VÉ</a>
+            </div>
+            <div class="nav_content">
+                <a class="font_chu text-white   " href="">LỊCH SỬ MUA VÉ</a>
+            </div>
+        </div>
+        <!-- <div class=" font_chu text-white mt-10 ml-12 grid grid-cols-9 font-bold text-[22px]">
+        <a href="" class=" text-center   col-span-2  w-[271px] h-[32px]" ><span class="pr-5" style="border-right: 2px solid white;">TRANG CHỦ</span></a>
+        <a href="" class="-ml-24 col-span-2 w-[271px] h-[25px]">PHIM ĐANG CHIẾU</a>
+    </div> -->
+        <div class="content_body w-full h-[772px] grid grid-rows-6 relative">
+            <div class="w-full">
+                <div class=" w-full font_chu text-white mt-7 ml-12 grid grid-cols-9 font-bold text-[22px]">
+                    <p href="" class=" text-center   col-span-2 text-[35px] w-[271px] h-[32px] z-0"><span class="pr-5"
+                            style="border-right: 2px solid white;">TRANG CHỦ</span></p>
+                    <p href="" class="-ml-10 col-span-2 text-[35px] w-[406px] h-[25px] z-0">PHIM SẮP CHIẾU</p>
+                </div>
+            </div>
+            <div class="row-span-4">
+                <div class="grid grid-cols-5">
+                    <div class="flex justify-center  col-span-2 relative">
+                        <img class="img_infor_film w-[348px] h-[263px] rounded-2xl" src="./anhphim/anhfilm1.jpg" alt="">
+                        <button
+                            class="btn_mua_ve text-white w-[163px] h-[55px] font_chu font-bold text-[22px] leading- bg-orange-500 rounded-md absolute top-72 hover:text-orange-500 hover:bg-white"> MUA VÉ</button>
+                    </div>
+                    <div class="col-span-3 text-white font_chu_content leading-9">
+                        <div>
+                            <strong class="font-semibold text-[25px]">Đạo diễn :</strong>&nbsp;&nbsp;<span
+                                class="font-medium text-[25px]"> Tân DS</span>
+                        </div>
+                        <div class="mt-5">
+                            <strong class="font-semibold text-[25px] ">Diễn viên :</strong>&nbsp;&nbsp;<span
+                                class="font-medium text-[25px]"> Issac , La Thành, Lợi Trần, Ngọc Hồ, Emma Lê,
+                                ...</span>
+                        </div>
+                        <div class="mt-5">
+                            <strong class="font-semibold text-[25px] ">Thể loại : </strong>&nbsp;&nbsp;<span
+                                class="font-medium text-[25px]"> Hài, Hành Động, Tình Cảm</span>
+                        </div>
+                        <div class="mt-5">
+                            <strong class="font-semibold text-[25px] ">Khởi chiếu :</strong>&nbsp;&nbsp;<span
+                                class="font-medium text-[25px]"> 06/10/2023</span>
+                        </div>
+                        <div class="mt-5">
+                            <strong class="font-semibold text-[25px] ">Thời lượng :</strong>&nbsp;&nbsp;<span
+                                class="font-medium text-[25px]"> 107 phút</span>
+                        </div>
+                        <div class="mt-5">
+                            <strong class="font-semibold text-[25px] ">Ngôn ngữ :</strong>&nbsp;&nbsp;<span
+                                class="font-medium text-[25px]">Tiếng Việt</span>
+                        </div>
+                        <div class="mt-5">
+                            <strong class="font-semibold text-[25px] ">Đánh giá :</strong>&nbsp;&nbsp;<span
+                                class="font-medium text-[25px]">4.5/5.0 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <p class="text-white font_chu_content font-medium text-[25px] leading-8 absolute top-[781px] pl-24 pr-24">Bộ phim xoay quanh câu chuyện về các bạn trẻ dù xuất hiện tại những bối cảnh khác nhau và đối mặt vấn đề riêng, tất cả cùng có chung một điểm là những người trẻ đang đứng trước những ''ngọn núi" phải chinh phục của chính mình.</p>
+        </div>
+    </div>
+    <div class="footer w-full absolute top-[950px]">
+        <div class="grid grid-rows-5">
+            <div>
+                <hr class="hr_footer ">
+            </div>
+            <div class="">
+                <img class="logo_footer_home" src="./homeimg/footer_img/FSTARS_NHỎ HƠN.png" alt="">
+            </div>
+            <div class="row-span-3 grid grid-cols-2">
+                <div>
+                    <p class="text-white">dsfdsfsdfsdfds</p>
+                </div>
+                <div>
+                    <p class="text-white">dsafcdsfdsgsdgs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL MUA VÉ -->
+    <form action="" method="post">
+        <div class="modal_mua_ve font_chu" style=" z-index: 9999;display: none;">
+            <div class="modal-muave " style=" width: 1181px; height: 700px;">
+                <span class="modal-close">&times;</span>
+                <div class="mua_ve gird grid-rows-6">
+                    <div class="thu_ngay click_active_button grid grid-cols-7">
+                        <div>
+                            <button class="choose_day choose_btn w-[149px] h-[56px] bg-white rounded-lg font-bold text-[20px] font_chu"
+                                style="box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);" type="button"><span>Thứ
+                                    2</span><br><span>6-11</span></button>
+                        </div>
+                    </div>
+                    <hr class="mt-6 bg-black w-full " style="border:2px black solid">
+                    <div class="dia_diem click_active_button  mt-6 grid grid-cols-7 gap-2 ">
+                        <div>
+                            <button class="choose_address choose_btn w-[137px] h-[44px] bg-white rounded-lg font-bold text-[20px] font_chu"
+                                style="box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);" type="button"><span>Thanh
+                                    Hóa</span></button>
+                        </div>
+                    </div>
+                    <hr class="mt-6 bg-black w-full " style="border:2px black solid">
+                    <div class="loai_rap click_active_button mt-6 flex">
+                        <div>
+                            <button class="choose_rap  choose_btn  w-[76px] h-[37px] bg-white rounded-lg font-bold text-[20px] font_chu"
+                                style="box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);"
+                                type="button"><span>2D</span></button>
+                        </div>
+                        <div>
+                            <button class="choose_rap choose_btn w-[76px] h-[37px] bg-white rounded-lg font-bold text-[20px] font_chu ml-3"
+                                style="box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);"
+                                type="button"><span>3D</span></button>
+                        </div>
+                    </div>
+                    <hr class="gio_chieu_1 mt-6 bg-black w-full " style="border:2px black solid;display: none;">
+                    <div class="gio_chieu_1 click_active_button mt-6 grid grid-cols-12 font_chu" style="display:none">
+                        <div class="">
+                            <span class="text-center font-bold text-[23px]">FSTARTS VINH 1</span>
+                        </div>
+                        <div></div>
+                        <div class="col-span-9">
+                            <div class="grid grid-cols-8 gap-2">
+                                <div><button type="button"
+                                        class="choose_time choose_btn w-[94px] h-[37px] bg-white rounded-lg font-bold text-[20px]"
+                                        style="box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);"><span>8:00</span></button>
+                                </div>                   
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                    <hr class="gio_chieu_1 mt-6  w-full " style="border:2px black dashed;display:none;"  >
+                    <div class="gio_chieu_2 click_active_button mt-6 font_chu grid grid-cols-12" style="display:none">
+                        <div class="">
+                            <span class="text-center font-bold text-[23px]">FSTARTS VINH 2</span>
+                        </div>
+                        <div></div>
+                        <div class="col-span-9">
+                            <div class="grid grid-cols-8 gap-2">
+                                <div><button type="button"
+                                        class="choose_btn w-[94px] h-[37px] bg-white rounded-lg font-bold text-[20px]"
+                                        style="box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);"><span>8:00</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                    <hr class="mt-6  w-full " style="border:2px black dashed">
+                    <div class="grid grid-cols-11 mt-6">
+                        <div class="col-span-8"></div>
+                        <button class="huy_dat_ve font_chu w-[111px] h-[55px]  bg-white rounded-lg text-orange-600 font-bold text-[25px] hover:bg-orange-600 hover:text-white hover:duration-500" 
+                        type="button">HỦY</button>
+                        <button class="xac_nhan_dat_ve col-span-2 ml-6 font_chu w-[163px] h-[55px] bg-orange-600 text-white font-bold text-[25px] rounded-lg hover:bg-white hover:text-orange-600 hover:duration-500" type="submit">TIẾP TỤC</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <!-- HẾT MODAL MUA VÉ -->
+
+    <script>
+        //function thả phim
+        $(document).ready(function () {
+            $("#Movie_nav").click(function () {
+                var navFilm = $(this).find('.nav_film');
+                if (navFilm.css('display') === 'none') {
+                    navFilm.css('display', 'block');
+                } else {
+                    navFilm.css('display', 'none');
+                }
+            })
+        });
+        $(document).ready(function () {
+            $("#Genre_nav").click(function () {
+                var navFilm = $(this).find('.genre_film');
+                if (navFilm.css('display') === 'none') {
+                    navFilm.css('display', 'block');
+                } else {
+                    navFilm.css('display', 'none');
+                }
+            })
+        });
+
+        //hàm hover
+        $(document).ready(function () {
+            $(".img_infor_film").hover(function () {
+                $(this).css({})
+            })
+        })
+
+
+        //Hàm modal mua vé
+    $(document).ready(function () {
+        $(".btn_mua_ve").click(function () {
+            $(".modal_mua_ve").show();
+        });
+
+        // Đóng modal khi click vào 
+        $(".modal-close").click(function () {
+            $(".modal_mua_ve").hide();
+        });
+    });
+        //hàm sự kiện mua vé
+    $(document).ready(function(){          
+        $('.click_active_button').on('click','.choose_btn',function(){
+            if($(this).hasClass('active')){
+                $(this).removeClass('active');
+                $(this).css({
+                    'background-color':'white',
+                    'border':'none'
+                })
+            }
+            else{
+                $(this).closest('.click_active_button').find('.choose_btn').removeClass('active');
+                $(this).closest('click_active_button').find('.choose_btn').css({
+                    'background-color':'white',
+                    'border':'none'
+                })
+                $(this).addClass('active');
+                $(this).css({
+                    'background-color':'rgba(255, 246, 241, 1)',
+                    'border':'2px solid black'
+                })
+            }
+        })
+        $('.choose_address').click(function(){
+            $('.gio_chieu_1').show();
+            $('.gio_chieu_2').show();
+        })
+        $('.huy_dat_ve').click(function(){
+            $(".modal_mua_ve").hide();
+        })
+    })
+    </script>
+</body>
+
+</html>

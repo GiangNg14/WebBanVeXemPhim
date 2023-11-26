@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./trangchu.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>ĐĂNG NHẬP</title>
+    <style>
+        .back_login {
+            background-image: url(./bodyimg/netflixteaser.png);
+            height: 750px;
+            width: fit-content;
+            background-repeat: no-repeat;
+        }
+
+        .font_page {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=" back_login grid grid-cols-2 w-full h-screen">
+        <div class="">
+        </div>
+        <div>
+            <div class="h-[635px]" style="background-color:rgba(255, 250, 247, 1);">
+                <div class="grid grid-cols-7">
+                    <div></div>
+                    <div class="col-span-5 relative flex justify-center">
+                        <h1 class="font-medium leading-9 text-[45px] top-24 fixed"
+                            style="text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);">Đăng nhập</h1>
+                        <svg class="absolute top-[212px] -ml-[395px] z-50 " xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <style>
+                                svg {
+                                    fill: #2f3641
+                                }
+                            </style>
+                            <path
+                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                        </svg>
+                        <input class="top-[188px] w-[433px] h-[65px] pl-8 font_page rounded-3xl absolute"
+                            style="border:1px solid black" type="text" value="Tên đăng nhập">
+                        <svg class="absolute top-[316px] -ml-[395px] z-50 " xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <style>
+                                svg {
+                                    fill: #6f747b
+                                }
+                            </style>
+                            <path
+                                d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z" />
+                        </svg>
+                        <input class="top-[292px] w-[433px] h-[65px] pl-8 font_page rounded-3xl absolute"
+                            style="border:1px solid black" type="password" value="">
+                        <a class="font_page top-[372px] absolute left-[360px] hover:underline" href="">Quên mật khẩu ?</a>
+                        <button class="absolute top-[420px] w-[247px] h-[65px] font-medium bg-white rounded-full" style="box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.58);" type="submit">Đăng nhập</button>
+                        <span class="absolute top-[520px]">Chưa có tài khoản ? <a class="underline" href="./dangky.html"><strong>Đăng ký</strong></a></span>
+                        <img class="absolute top-[550px] z-50 w-[430px] h-[160px]" src="./homeimg/FSTARS.png" alt="">
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="h-[115px] relative" style="background-color: rgba(252, 150, 152, 0.9);">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

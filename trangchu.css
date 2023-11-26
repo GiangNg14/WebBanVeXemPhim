@@ -1,0 +1,240 @@
+/* font */
+.font_chu{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* header */
+ 
+.home_header{
+    height: 147px;
+    background-image:url(./homeimg/backg_top.png);
+}
+/* logo header */
+.img_logo{
+    max-width: 509px;
+   max-height: 143px;
+}
+/* input search */
+.search_head{
+    width: 387px;
+    height: 47px;
+    margin-top: 64px;
+    z-index: 8888;
+   
+}
+/* icon search header */
+.search_node{
+    max-width: 16px;
+    max-height: 23px;
+    margin-top: 76px;
+    z-index: 800;
+    left: 850px;
+}
+/* navbar header */
+.nav_header{
+    max-height: 34px;
+    
+}
+.nav_content{
+    
+    text-align: center;
+    
+}
+.nav_content a{
+    font-weight: 700;
+}
+.nav_film{
+    display: none;
+}
+
+.line_nav{
+   
+    width: 502px;
+    height: 0px;
+    left: 0px;
+    
+    top: 900px;
+    border: 2px dashed #FFFFFF;
+}
+/* background-body */
+.main_content{
+    background-color: rgba(0, 0, 0, 0.92) ;
+}
+.prev_btn{
+    width: 69px;
+    height: 100px;
+    margin-top: 190px;
+    margin-left: 170px;
+}
+.next_btn{
+    width: 69px;
+    height: 100px;
+    margin-top: 190px;
+    
+}
+img#img_main {
+    height: 450px;
+}
+/* css phim trang chủ */
+.film_homepage{
+    background-image: url(./bodyimg/back_film.png);
+    height: 1425px;
+}
+.img_film_home{
+    max-width: 396px;
+    max-height: 246px;
+    
+}
+.img_phim{
+    max-width: 396px;
+    max-height: 246px;
+    border-radius: 37px;
+}
+.img_film_home:hover{
+    box-shadow:3px 3px 3px rgba(248, 34, 34, 0.696) ;
+   
+}
+/* khuyến mãi css */
+.discount_home{
+    background-image: url(./bodyimg/khuyenmai/back_khuyenmai.png);
+    height: 426px;
+}
+/* footer css */
+.home_footer{
+    background-color: black;
+    height: 234px;
+}
+.hr_footer{
+    max-width: 1240px;
+    margin-left: 100px;
+}
+.logo_footer_home{
+    margin-left: 40%;
+    margin-top: -30px;
+}
+
+/* Modal thông tin phim */
+.modal {
+    display:none ;
+    
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #404040;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 980px;
+    position: relative;
+    border-radius: 5px;
+    height: 520px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.movie-details {
+    margin-bottom: 5px;
+}
+.btn_buy_ticket{
+    border: 1px solid black;
+    width: 121px;
+    height: 45px;
+    margin-top: 15px;
+    
+}
+.text_color{
+    color: #B8B8B8;
+}
+
+.modal_info_film {
+    position: fixed; /* Đặt vị trí của modal là cố định */
+    top: 50%; /* Di chuyển modal lên phía trên 50% của trang */
+    left: 50%; /* Di chuyển modal sang trái 50% của trang */
+    transform: translate(-50%, -50%); /* Dịch chuyển modal lùi lại 50% chiều rộng và 50% chiều cao của nó */
+  }
+
+  /* Modal mua vé */
+  .modal {
+    display: none;
+
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-muave {
+    background-color: rgba(255, 250, 247, 1);
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 1181px;
+    position: relative;
+    border-radius: 5px;
+    height: 520px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.movie-details {
+    margin-bottom: 5px;
+}
+
+.text_color {
+    color: #B8B8B8;
+}
+
+.modal_mua_ve {
+    position: fixed;
+    /* Đặt vị trí của modal là cố định */
+    top: 50%;
+    /* Di chuyển modal lên phía trên 50% của trang */
+    left: 50%;
+    /* Di chuyển modal sang trái 50% của trang */
+    transform: translate(-50%, -50%);
+    /* Dịch chuyển modal lùi lại 50% chiều rộng và 50% chiều cao của nó */
+}
+
+ 

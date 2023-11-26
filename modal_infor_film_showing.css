@@ -1,0 +1,144 @@
+/* font */
+.font_chu {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.font_chu_content {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font_roboto_cach_dieu {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Serif', serif;
+}
+
+
+/* header */
+
+.home_header {
+    height: 147px;
+    background-image: url(./homeimg/backg_top.png);
+}
+
+/* logo header */
+.img_logo {
+    max-width: 509px;
+    max-height: 143px;
+}
+
+/* input search */
+.search_head {
+    width: 387px;
+    height: 47px;
+    margin-top: 64px;
+    z-index: 8888;
+
+}
+
+/* icon search header */
+.search_node {
+    max-width: 16px;
+    max-height: 23px;
+    margin-top: 76px;
+    z-index: 800;
+    left: 850px;
+}
+
+/* navbar header */
+.nav_header {
+    max-height: 34px;
+
+}
+
+.nav_content {
+
+    text-align: center;
+
+}
+
+.nav_content a {
+    font-weight: 700;
+}
+
+/* body css */
+.content_body {
+    background-image: url(./bodyimg/back_film.png);
+
+}
+
+/* footer css */
+.footer {
+    background-color: black;
+    height: 234px;
+}
+
+.hr_footer {
+    max-width: 1240px;
+    margin-left: 100px;
+}
+
+.logo_footer_home {
+    margin-left: 40%;
+    margin-top: -30px;
+}
+
+/* Modal mua vé */
+.modal {
+    display: none;
+
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-muave {
+    background-color: rgba(255, 250, 247, 1);
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 1181px;
+    position: relative;
+    border-radius: 5px;
+    height: 520px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.movie-details {
+    margin-bottom: 5px;
+}
+
+.text_color {
+    color: #B8B8B8;
+}
+
+.modal_mua_ve {
+    position: fixed;
+    /* Đặt vị trí của modal là cố định */
+    top: 50%;
+    /* Di chuyển modal lên phía trên 50% của trang */
+    left: 50%;
+    /* Di chuyển modal sang trái 50% của trang */
+    transform: translate(-50%, -50%);
+    /* Dịch chuyển modal lùi lại 50% chiều rộng và 50% chiều cao của nó */
+}

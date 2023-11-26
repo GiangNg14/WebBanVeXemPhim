@@ -1,0 +1,101 @@
+/* font chữ */
+
+.font_page{
+    font-family: 'Roboto', sans-serif;
+}
+/* css header */
+.head_logo{
+    height: 70px;
+    text-align: -webkit-center;
+}
+.logo_head_staff{
+    margin-left: 35px;
+}
+.near_head_logo{
+    background-color:rgba(28, 33, 40, 1);
+    max-width: 1139px;
+}
+.avatar_staff{
+    width: 49px;
+    height: 49px;
+    margin-top: 9px;
+    
+}
+/* navbar css */
+.nav_staff{
+    background-color: rgba(28, 33, 40, 1);
+    height: 956px;
+}
+.avatar_nav{
+    text-align: -webkit-center;
+    
+}
+.background_items_nav{
+    background-color: rgba(35, 45, 53, 1);
+}
+.items_nav a{
+    color: rgba(195, 195, 195, 1);
+    
+}
+.items_nav a>span{
+    margin-top: 15px;
+    font-size: 20px;
+}
+.items_nav a>span:hover{
+    color: red;
+}
+
+/* css main content */
+.main_content{
+    background-color: rgba(64, 106, 128, 1);
+}
+.table_account td{
+    border: 1px solid rgba(136, 136, 136, 1);
+    width: 162px;
+    height: 47px;
+    text-align: center;
+}
+.table_account th{
+    border: 1px solid rgba(136, 136, 136, 1);
+    width: 162px;
+    height: 47px;
+    
+}
+.back_table_account{
+    background-color: rgba(231, 231, 231, 1);
+    
+}
+
+/* css button thêm sửa xóa */
+#myBtn{
+ background-color: green;
+ border: 1px solid black;
+ width: 85px;
+ height: 37px;
+ border-radius: 32px;
+ color: white;
+ 
+}
+.del_btn{
+
+width: 85px;
+ height: 37px;
+ border-radius: 32px;
+ color: white;
+ border: 1px solid black;
+ margin-top: 5px;
+}
+
+/* css table event */
+.table_event td{
+    border: 1px solid rgba(136, 136, 136, 1);
+    width: 162px;
+    height: 47px;
+    text-align: center;
+}
+.table_event th{
+    border: 1px solid rgba(136, 136, 136, 1);
+    width: 162px;
+    height: 47px;
+    
+}
